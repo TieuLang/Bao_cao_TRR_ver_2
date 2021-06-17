@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<link rel="stylesheet" href="style.css">
+
+ 
+</head>
+ 
+<body>
+ 
+<div class="wrap">
+ 
+    <div id="header"> 
+        <div class="array-inputs">
+            <p>Size of the array:</p>
+            <input id="a_size" type="range" min=10 max=20 step=1 value=15>
+            <p>Speed of the algorithm:</p>
+            <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+            <button id="a_generate">Tạo mảng</button>
+            <!-- <p id="test1">abc</p>
+            <p id="test2">def</p>
+            <p id="test3">ghi</p> -->
+        </div>
+
+        <div class="header_right">
+            <p class="nav-heading">MÔ PHỎNG SẮP XẾP </p>
+            <div class="algos">
+                <button>Bubble</button>
+                <button>Selection</button>
+                <button>Insertion</button>
+                <button>TreeSort</button>
+                <button style="margin-right: 0px;">Radix Sort</button>
+            </div>
+        </div>
+    </div>
+     
+    <div class="main"> 
+        <div class="nav">
+          <div1 id="test">123</div1>
+            <section>
+
+                <div class="Info_Cont1" >
+                  <!--Bubble sort code-->
+<p>
+<pre id="bbl">
+  Bubblesort(){
+    <span  id="line1">for(i = 0; i < arraySize ; i++)</span>
+      {
+        <span id="line2"> for(j = 0; j < arraySize-i-1 ; k++)</span>
+          {
+            <span id="line3">if(A[j] > A[j+1])</span>
+            {
+              <span id="line4">swap(A[j], A[j+1]);</span>
+            }
+          }
+      }
+  }
+</pre>
+</p>
+            
+  <!--Insertion Sort-->
+<p>
+<pre id="insert" style="padding-top:0px">
+  InsertionSort(){
+    <span id="line5">for(i = 1; i < arraySize; i++)</span>
+    {
+      <span id="line6">j = i-1;</span>
+      <span id="line7">x = A[i];</span>
+      <span id="line8">while(j > -1 && A[j] > x)</span>
+      {
+        <span id="line9">A[j+1] = A[j];</span>
+        <span id="line10">j--;</span>
+      }
+      <span id="line11">A[j+1] = x;</span>
+    }
+  }
+</pre>
+</p>
+            
+<!--Selection Sort-->
+<p>
+<pre id="select" style="padding-top:0px">
+  SelectionSort(){
+    <span id="line12">for(i = 0; i < arraySize-1; i++)</span>
+    {
+      <span  id="line13">for(j = k = i; j < arraySize; j++)</span>
+      {
+        <span id="line14">if(A[j] < A[k])</span>
+        <span id="line15">k = j;</span>
+      }
+      <span id="line16">swap(A[i], A[k]);</span>
+    }
+  }
+</pre>
+</p>
+            
+<!--Merge Sort-->
+<p>
+<pre id="tree" style="padding-top:0px">
+  Node* insert(Node* node, int key)
+  {
+    <span id="line17">if (node == NULL) return newNode(key);</span>
+    <span id="line18">if (key < node->key)</span>
+      <span id="line19">node->left  = insert(node->left, key);</span>
+    <span id="line20"> else</span>
+      <span id="line21">node->right = insert(node->right, key);</span>
+    <span id="line22">return node;</span>
+  }
+
+  void lnr(Node *root, int arr[], int &i)
+  {
+    <span id="line23">if (root != NULL)</span>
+    {
+      <span id="line24">lnr(root->left, arr, i);</span>
+      <span id="line25">arr[i++] = root->key;</span>
+      <span id="line26">lnr(root->right, arr, i);</span>
+    }
+  }
+
+  TreeSort()
+  {
+    <span id="line27">for (int i=0; i < array_size; i++)</span>
+      <span id="line28">root = insert(root, arr[i]);</span>
+    <span id="line29">int i=0;</span>
+    <span id="line30">lnr(root, arr, i);</span>
+  }
+</pre>
+</p>
+            
+<!--Quick Sort-->
+<p>
+<pre id="radix" style="padding-top:0px">
+  RadixSort()
+  {
+    <span id="line35">for (x=1;x/Array_max>0;x=x*10)</span>
+    {
+      <span id="line36">create_stack()</span>
+      <span id="line37">for (int i=0;i < array_size;i++)</span>
+      {
+        <span id="line38">int vt=arr[i]/exp%10</span>
+        <span id="line39">stack[i].push(arr[i])</span>
+      };
+      <span id="line40">int tmp=0;</span>
+      <span id="line41">for (int i=0;i < 10;i++)</span>
+        <span id="line42">for (int j=0;j < stack[i].size();j++)</span>
+        {
+          <span id="line43">arr[tmp]=stack[i][j];</span>
+          <span id="line44">tmp=tmp+1;</span>
+        };  
+    }
+  }
+</pre>
+</p>
+</div>
+</section>
+</div>
+         
+        <div class="content">
+            <div id="ct_left">
+                <div id="array">arr</div>
+                <div id="stt">
+                  
+                </div>
+            </div>
+            <div id="ct_right">
+              <pre id="box1">
+    <b>Initial</b>
+                </pre>
+                <br>
+                <pre id="box2">
+    <b>Checking</b> 
+                </pre>
+                <br>
+                <pre id="box3" >
+    <b>Swapping</b> 
+                </pre>
+                <br>
+                <pre id="box4">
+    <b>Swapped</b>
+                </pre>
+            </div>
+        </div>
+    </div> <!-- kết thúc nội dung chính -->
+    
+</div> <!-- sử dụng 1 div bao hết nội dung web lại -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="setUp.js"></script>
+<script src="basicFunctions.js"></script>
+<script src="bubble.js"></script>
+<script src="radixsort.js"></script>
+<script src="treesort.js"></script>
+</body>
+</html>
