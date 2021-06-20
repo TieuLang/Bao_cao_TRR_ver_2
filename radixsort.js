@@ -91,4 +91,5 @@ function Radixsort() {
         };
         for (var i=0;i<array_size;i++) divs[i]=divs_new[i];
    };
+   enable_buttons();
 }

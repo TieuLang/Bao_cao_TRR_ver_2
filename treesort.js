@@ -91,4 +91,5 @@ function treesort() {
     doimau(30);
     doimau(30);
     lnr(0);
+    enable_buttons();
 }

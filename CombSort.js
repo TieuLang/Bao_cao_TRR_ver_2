@@ -68,5 +68,5 @@ function combsort()
             div_update(divs[i+gap],div_sizes[i+gap],"#d7385e");
         }
     }
-    for (var i=0;i<array_size;i++) div_update(divs[i],div_sizes[i],"green");
+    enable_buttons();
 }
