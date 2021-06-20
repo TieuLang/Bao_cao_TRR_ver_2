@@ -3,6 +3,7 @@ $("#insert").hide();
 $("#select").hide();
 $("#merge").hide();
 $("#radix").hide();
+$("#shell").hide();
 
 var inp_as = document.getElementById('a_size'), array_size = inp_as.value;
 var inp_gen = document.getElementById("a_generate");
@@ -24,9 +25,6 @@ function generate_array() {
     for (var i = 0; i < array_size; i++) {
         div_sizes[i] = Math.floor(Math.random() * 8 * (inp_as.max - inp_as.min)) + 10;
         divs[i] = document.createElement("div");
-        text[i] = document.createElement("pp");
-        text[i].textContent = div_sizes[i];
-        divs[i].appendChild(text[i]);
         cont.appendChild(divs[i]);
         margin_size = 0.5;
         divs[i].style = "margin: 0%" + margin_size + "% ;; background-color:#d7385e; width:" + (100 / array_size - (2 * margin_size)) + "%; height:" + (div_sizes[i]) + "%;";
@@ -101,57 +99,15 @@ function runalgo() {
             break;
         case "Insertion": Insertion();
             break;
-        case "TreeSort": 
+        case "TreeSort":
             generate_array_RS();
             treesort();
             break;
         case "Radix Sort":
-            {
-                generate_array_RS();
-
-                // var redElem = document.getElementById("arr0");
-                // var kc1 = (665 - parseInt(divs[0].style.top)) / 100;
-                // // top1=665,left1=447;top0=300,left0=420;
-                // var tmp=document.getElementById("test");
-                // tmp.innerHTML=divs[0].style.top;
-                // var kc2 = (447 - parseInt(divs[0].style.left)+91*9) / 100;
-                // var poe1 = parseInt(redElem.style.top);
-                // var poe2 = parseInt(redElem.style.left);
-                // var sll = 0;
-                // window.setTimeout(function() {
-                //     var sll=0;
-                //     var anim = setInterval(animate,5);
-                //     function animate() {
-                //         if (sll>=100) {
-                //             clearInterval(anim);
-                //         } else {
-                //             poe1 = poe1 + kc1;
-                //             poe2 = poe2 + kc2;
-                //             redElem.style.top = poe1 + "px";
-                //             redElem.style.left = poe2 + "px";
-                //             sll = sll + 1;
-                //         };
-                //     }
-                //     tmp.innerHTML=divs[0].style.top;
-                // }, 0);
-                // window.setTimeout(function() {
-                //     var sll=0;
-                //     var anim = setInterval(animate, 5);
-                //     function animate() {
-                //         if (sll>=100) {
-                //             clearInterval(anim);
-                //         } else {
-                //             poe1 = poe1 - kc1;
-                //             poe2 = poe2 - kc2;
-                //             redElem.style.top = poe1 + "px";
-                //             redElem.style.left = poe2 + "px";
-                //             sll = sll + 1;
-                //         };
-                //     };
-                //     tmp.innerHTML=divs[0].style.top;
-                // }, 1000);
-                Radixsort();
-            }
+            generate_array_RS();
+            Radixsort();
+            break;
+        case "Shellsort": ShellSort();
             break;
     }
 }
