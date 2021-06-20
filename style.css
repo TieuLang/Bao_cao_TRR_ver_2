@@ -2,12 +2,12 @@ body
 {
     margin: 0 auto; /* canh bố cục đều 2 bên */
     padding: 0;
-    width:  1490px;
+    width:  1480px;
 }
  
 html body div.wrap
 {
-    width: 1490px; /* kích thước chiều rộng trang web */
+    width: 1480px; /* kích thước chiều rộng trang web */
     float: left; /* canh div từ trái sang */
 }
  
@@ -51,6 +51,16 @@ html body div.wrap div#header div.array-inputs button#a_generate {
   width: 100px;
   height: 20px;
   margin: 0px 250px;
+}
+
+html body div.wrap div#header div.array-inputs button#a_generate_2 {
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  width: 100px;
+  height: 20px;
+  margin: 0px 120px;
 }
 
 html body div.wrap div#header div.array-inputs button#a_generate:hover {
@@ -120,7 +130,7 @@ html body div.wrap div#header div.header_righ div.algos .butt_unselected:hover {
  
 .main
 {
-    width: 1490px; /* kích thước chiều rộng trang web */
+    width: 1480px; /* kích thước chiều rộng trang web */
     float: left; /* canh div từ trái sang */
 }
  
@@ -137,10 +147,10 @@ html body div.wrap div#header div.header_righ div.algos .butt_unselected:hover {
  
 .content
 {
-    width: 1090px; /* kích thước chiều rộng của vùng nội dung */
+    width: 1080px; /* kích thước chiều rộng của vùng nội dung */
     height: 562px;
     float:left;
-    background-color: darkblue; /* tạo màu để dễ nhìn */
+    background-color: white; /* tạo màu để dễ nhìn */
     z-index: 0;
     position: relative;
     
@@ -159,10 +169,10 @@ html body div.wrap div#header div.header_righ div.algos .butt_unselected:hover {
 
 #ct_right
 {
-    width: 110px;
+    width: 100px;
     height: 562px;
     float:right;
-    background-color: white;
+    background-color: lightgreen;
 }
 
 #array

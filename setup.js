@@ -1,15 +1,16 @@
 $("#bbl").hide();
-$("#insert").hide();
+$("#CombSort").hide();
 $("#select").hide();
-$("#merge").hide();
+$("#tree").hide();
 $("#radix").hide();
 $("#shell").hide();
 
 var inp_as = document.getElementById('a_size'), array_size = inp_as.value;
 var inp_gen = document.getElementById("a_generate");
+var inp_gen_2 = document.getElementById("a_generate_2");
 var inp_aspeed = document.getElementById("a_speed");
-var buts_algo = document.querySelectorAll(".algos button");
 
+var butts_algos=document.querySelectorAll(".algos button"); 
 var div_sizes = [];
 var divs = [];
 var text = [];
@@ -17,6 +18,7 @@ var margin_size;
 var cont = document.getElementById("array");
 cont.style = "flex-direction:row";
 inp_gen.addEventListener("click", generate_array);
+inp_gen_2.addEventListener("click", generate_array_RS);
 
 function generate_array() {
     cont.innerHTML = "";
@@ -74,9 +76,9 @@ window.onload = update_array_size();
 
 //Running the appropriate algorithm.
 
-for (var i = 0; i < buts_algo.length; i++) {
+for (var i = 0; i < butts_algos.length; i++) {
 
-    buts_algo[i].addEventListener("click", runalgo);
+    butts_algos[i].addEventListener("click", runalgo);
 }
 
 function disable_buttons() {
@@ -91,21 +93,64 @@ function disable_buttons() {
     }
 }
 function runalgo() {
+    disable_buttons()
     this.classList.add("butt_selected");
     switch (this.innerHTML) {
         case "Bubble": Bubble();
             break;
         case "Selection": Selection();
             break;
-        case "Insertion": Insertion();
+        case "CombSort": combsort();
             break;
-        case "TreeSort":
-            generate_array_RS();
+        case "TreeSort": 
             treesort();
             break;
         case "Radix Sort":
-            generate_array_RS();
-            Radixsort();
+            {
+
+                // var redElem = document.getElementById("arr0");
+                // var kc1 = (665 - parseInt(divs[0].style.top)) / 100;
+                // // top1=665,left1=447;top0=300,left0=420;
+                // var tmp=document.getElementById("test");
+                // tmp.innerHTML=divs[0].style.top;
+                // var kc2 = (447 - parseInt(divs[0].style.left)+91*9) / 100;
+                // var poe1 = parseInt(redElem.style.top);
+                // var poe2 = parseInt(redElem.style.left);
+                // var sll = 0;
+                // window.setTimeout(function() {
+                //     var sll=0;
+                //     var anim = setInterval(animate,5);
+                //     function animate() {
+                //         if (sll>=100) {
+                //             clearInterval(anim);
+                //         } else {
+                //             poe1 = poe1 + kc1;
+                //             poe2 = poe2 + kc2;
+                //             redElem.style.top = poe1 + "px";
+                //             redElem.style.left = poe2 + "px";
+                //             sll = sll + 1;
+                //         };
+                //     }
+                //     tmp.innerHTML=divs[0].style.top;
+                // }, 0);
+                // window.setTimeout(function() {
+                //     var sll=0;
+                //     var anim = setInterval(animate, 5);
+                //     function animate() {
+                //         if (sll>=100) {
+                //             clearInterval(anim);
+                //         } else {
+                //             poe1 = poe1 - kc1;
+                //             poe2 = poe2 - kc2;
+                //             redElem.style.top = poe1 + "px";
+                //             redElem.style.left = poe2 + "px";
+                //             sll = sll + 1;
+                //         };
+                //     };
+                //     tmp.innerHTML=divs[0].style.top;
+                // }, 1000);
+                Radixsort();
+            }
             break;
         case "Shellsort": ShellSort();
             break;

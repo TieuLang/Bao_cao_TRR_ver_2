@@ -6,6 +6,9 @@ function treesort() {
     $("#tree").show();
     $("#radix").hide();
     $("#stt").hide();
+    $("#ct_right").hide();
+    $("#shell").hide();
+    $("#CombSort").hide();
     c_delay = 0;
     var tree=new Array(500);
     var tree_divs=new Array(500);
