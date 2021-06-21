@@ -21,7 +21,6 @@ function treesort() {
         doimau(27);
         function insert(a,x,sl_trai)
         {
-            var test=document.getElementById("test");
             doimau(17);
             
             if (tree[x]==-1) 

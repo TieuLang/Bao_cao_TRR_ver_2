@@ -40,8 +40,6 @@ function combsort()
         swapped=false;
         for (var i=0;i<array_size-gap;i++)
         {
-            var test=document.getElementById("test");
-            test.innerHTML=array_size;
             div_update(divs[array_size],div_sizes[array_size],"green",13);
             div_update(divs[array_size],div_sizes[array_size],"green",13);
             div_update(divs[array_size],div_sizes[array_size],"green",14);

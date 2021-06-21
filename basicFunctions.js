@@ -43,7 +43,6 @@ function div_update1(cont,sl,i,dleft,dtop)
     if (kt_dau==false) c_delay=c_delay; 
     window.setTimeout(function(){
         
-        var xxx=document.getElementById("test");
         
         var kc_top1=parseInt(cont.style.top);
         var kc_left1=parseInt(cont.style.left);
@@ -52,8 +51,6 @@ function div_update1(cont,sl,i,dleft,dtop)
         var poe_top=parseInt(cont.style.top);
         var poe_left=parseInt(cont.style.left);
         
-        console.log(cont);
-        console.log(xxx);
         window.setInterval(function(){
             if (sl<=0) {
                 window.clearInterval();

@@ -74,7 +74,6 @@ function Radixsort() {
                 divs_new[tmp]=divs[vt];
                 var poe1 = 0;
                 var poe2 = 0;
-                var test = document.getElementById("test");
                 divs_left[vt]=420+vt_left;
                 divs_top[vt]=170;
                 doimau(43);
